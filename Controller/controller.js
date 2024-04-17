@@ -3,7 +3,7 @@ const router = express.Router();
 const ContactUs = require('../model/form');
 
 router.post('/', async (req, res) => {
-    const { name, email, tel, textarea } = req.body;
+    const { name, email, tel, message } = req.body;
 
     try {
         await ContactUs.create({
