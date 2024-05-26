@@ -28,6 +28,10 @@ app.post("/",function(req,res){
     newNote.save();
     res.redirect('/');
 })
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 app.listen(5500,function(){
     console.log("server is running on 5500");
 })
