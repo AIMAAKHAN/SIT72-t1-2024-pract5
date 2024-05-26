@@ -28,7 +28,7 @@ app.post("/",function(req,res){
     newNote.save();
     res.redirect('/');
 })
-
+//routers get, listen 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
